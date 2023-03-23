@@ -1,3 +1,4 @@
+
 from random import randint
 
 if __name__ == '__main__':
@@ -89,8 +90,9 @@ while juego==True:
 							else:
 								print("El valor minimo son 10000$ tacaño :v")
 					else:
-							print("no se puede apostar mas de lo que tienes ")	
-		#CUANDO SON 3 JUGADORES	
+							print("no se puede apostar mas de lo que tienes ")			
+			
+#CUANDO SON 3 JUGADORES	
 		if jugadores==3:
 					monto_jugador11 = 1000000
 					monto_jugador22 = 1000000
@@ -203,7 +205,7 @@ while juego==True:
 								print("El valor minimo son 10000$ tacaño :v")
 						else:
 		
-							print("no se puede apostar mas de lo que tienes ")
+							print("no se puede apostar mas de lo que tienes ")			
 #CUANDO 
 # SON 4 JUGADORES
 		if jugadores==4:
@@ -351,4 +353,190 @@ while juego==True:
 							else:
 								print("El valor minimo son 10000$ tacaño :v")
 						else:
+							print("no se puede apostar mas de lo que tienes ")
+	#CUANDO SON 5 JUGADORES 
+		if jugadores==5:
+					monto_jugador1111 = 1000000
+					monto_jugador2222 = 1000000
+					monto_jugador3333 = 1000000
+					monto_jugador4444 = 1000000
+					monto_jugador5555 = 1000000
+					mesa5=0
+					while mesa5==0:
+						print("cuanto quiere apostar el jugador1?")
+						apuestajugador1111 = float(input())
+						print("cuanto quiere apostar el jugador2?")
+						apuestajugador2222 = float(input())
+						print("cuanto quiere apostar el jugador 3?")
+						apuestajugador3333 = float(input())
+						print("cuanto quiere apostar el jugador 4?")
+						apuestajugador4444 = float(input())
+						print("cuanto quiere apostar el jugador 5?")
+						apuestajugador5555 = float(input())
+						mesa5 = apuestajugador1111+apuestajugador2222+apuestajugador3333+apuestajugador4444+apuestajugador5555
+						if apuestajugador1111<monto_jugador1111 or apuestajugador2222<monto_jugador2222 or apuestajugador3333<monto_jugador3333 or apuestajugador4444<monto_jugador4444 or apuestajugador5555<monto_jugador5555:
+							if apuestajugador1111>=10000 and apuestajugador2222>=10000 and apuestajugador3333>=10000 and apuestajugador4444>=10000 and apuestajugador5555>=10000:
+									jugador111=1
+									print(f"turno del jugador {jugador111}")
+									print(f"el dado  del jugador {jugador111} es")
+									dado1 = randint(0,5)+1
+									print(dado1)
+									if dado1==1 or dado1==6:
+										print("perdiste ,deja el monto en la mesa")
+										monto_jugador1111 = monto_jugador1111-apuestajugador1111
+										print(f"el jugador {jugador111} tiene")
+										print(monto_jugador1111)
+									if dado1==2 or dado1==3:
+										print("Vuelve a tirar el dado")
+										dado2 = randint(0,5)+1
+										print("el dado saco")
+										print(dado2)
+										if dado2>dado1:
+											print("felicidades sumas lo apostado")
+											monto_jugador1111= monto_jugador1111+apuestajugador1111
+											print("el jugador 1 tiene")
+											print(monto_jugador1111)
+										else:
+											print("perdiste ,deja el monto en la mesa")
+											monto_jugador1111 = monto_jugador1111-apuestajugador1111
+											print("el jugador 1 tiene")
+											print(monto_jugador1111)
+									if dado1==4 or dado1==5:
+										print("pasas de turno")
+										
+									jugador111+=1
+								
+									if jugador111==2:
+										print(f"turno del jugador {jugador111}")
+									print(f"el dado  del jugador {jugador111} es")
+									dado1 = randint(0,5)+1
+									print(dado1)
+									if dado1==1 or dado1==6:
+										print("perdiste ,deja el monto en la mesa")
+										monto_jugador2222 = monto_jugador2222-apuestajugador2222
+										print(f"el jugador {jugador111} tiene")
+										print(monto_jugador2222)
+									if dado1==2 or dado1==3:
+										print("Vuelve a tirar el dado")
+										dado2 = randint(0,5)+1
+										print("el dado saco")
+										print(dado2)
+										if dado2>dado1:
+											print("felicidades sumas lo apostado")
+											monto_jugador2222 = monto_jugador2222+apuestajugador2222
+											print("el jugador 2 tiene")
+											print(monto_jugador2222)
+										else:
+											print("perdiste ,deja el monto en la mesa")
+											monto_jugador2222 = monto_jugador2222-apuestajugador2222
+											print("el jugador 2 tiene")
+											print(monto_jugador2222)
+									if dado1==4 or dado1==5:
+										print("pasas de turno") 
+										
+									print(f"la mesa va en {mesa5} pesos")
+									jugador111+=1
+								
+									if jugador111==3:
+										print(f"turno del jugador {jugador111}")
+									print(f"el dado  del jugador {jugador111} es")
+									dado1 = randint(0,5)+1
+									print(dado1)
+									if dado1==1 or dado1==6:
+										print("perdiste ,deja el monto en la mesa")
+										monto_jugador3333 = monto_jugador3333-apuestajugador3333
+										print(f"el jugador {jugador111} tiene")
+										print(monto_jugador3333)
+									if dado1==2 or dado1==3:
+										print("Vuelve a tirar el dado")
+										dado2 = randint(0,5)+1
+										print("el dado saco")
+										print(dado2)
+										if dado2>dado1:
+											print("felicidades sumas lo apostado")
+											monto_jugador3333 = monto_jugador3333+apuestajugador3333
+											print("el jugador 3 tiene")
+											print(monto_jugador3333)
+										else:
+											print("perdiste ,deja el monto en la mesa")
+											monto_jugador3333 = monto_jugador3333-apuestajugador3333
+											print("el jugador 3 tiene")
+											print(monto_jugador3333)
+									if dado1==4 or dado1==5:
+										print("pasas de turno") 
+
+									print(f"la mesa va en {mesa5} pesos")
+									jugador111+=1
+
+									if jugador111==4:
+										print(f"turno del jugador {jugador111}")
+									print(f"el dado  del jugador {jugador111} es")
+									dado1 = randint(0,5)+1
+									print(dado1)
+									if dado1==1 or dado1==6:
+										print("perdiste ,deja el monto en la mesa")
+										monto_jugador4444 = monto_jugador4444-apuestajugador4444
+										print(f"el jugador {jugador111} tiene")
+										print(monto_jugador4444)
+									if dado1==2 or dado1==3:
+										print("Vuelve a tirar el dado")
+										dado2 = randint(0,5)+1
+										print("el dado saco")
+										print(dado2)
+										if dado2>dado1:
+											print("felicidades sumas lo apostado")
+											monto_jugador4444 = monto_jugador4444+apuestajugador4444
+											print("el jugador 4 tiene")
+											print(monto_jugador4444)
+										else:
+											print("perdiste ,deja el monto en la mesa")
+											monto_jugador4444 = monto_jugador4444-apuestajugador4444
+											print("el jugador 4 tiene")
+											print(monto_jugador4444)
+									if dado1==4 or dado1==5:
+										print("pasas de turno") 
+
+									print(f"la mesa va en {mesa5} pesos")
+									jugador111+=1
+								
+									if jugador111==5:
+										print(f"turno del jugador {jugador111}")
+									print(f"el dado  del jugador {jugador111} es")
+									dado1 = randint(0,5)+1
+									print(dado1)
+									if dado1==1 or dado1==6:
+										print("perdiste ,deja el monto en la mesa")
+										monto_jugador5555 = monto_jugador5555-apuestajugador5555
+										print(f"el jugador {jugador111} tiene")
+										print(monto_jugador5555)
+									if dado1==2 or dado1==3:
+										print("Vuelve a tirar el dado")
+										dado2 = randint(0,5)+1
+										print("el dado saco")
+										print(dado2)
+										if dado2>dado1:
+											print("felicidades sumas lo apostado")
+											monto_jugador5555 = monto_jugador5555+apuestajugador5555
+											print("el jugador 5 tiene")
+											print(monto_jugador5555)
+										else:
+											print("perdiste ,deja el monto en la mesa")
+											monto_jugador5555 = monto_jugador5555-apuestajugador5555
+											print("el jugador 5 tiene")
+											print(monto_jugador5555)
+									if dado1==4 or dado1==5:
+										print("pasas de turno") 
+
+									print(f"la mesa va en {mesa5} pesos")
+									
+									
+									if monto_jugador1111<=0 or monto_jugador2222<=0 or monto_jugador3333<=0 or monto_jugador4444<=0 or monto_jugador5555<=0:
+										print("juego Terminado")
+										break
+							else:
+								print("El valor minimo son 10000$ tacaño :v")
+						else:
 							print("no se puede apostar mas de lo que tienes ")	
+	print("NUMERO DE PARTICIPANTES INVALIDO")
+							
+
