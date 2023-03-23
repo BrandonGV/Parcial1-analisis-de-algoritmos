@@ -1,0 +1,2 @@
+# Parcial1-analisis-de-algoritmos
+BRANDON STIVEN GOMEZ VELEZ, BAIRON EDUARDO BUITRAGO DIAZ
